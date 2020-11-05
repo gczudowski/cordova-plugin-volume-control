@@ -18,15 +18,6 @@
   <js-module name="VolumeControl" src="www/VolumeControl.js">
     <clobbers target="cordova.plugins.VolumeControl" />
   </js-module>
-  <platform name="ios">
-		<framework src="MediaPlayer.framework" />
-    <config-file parent="/*" target="config.xml">
-      <feature name="VolumeControl">
-        <param name="ios-package" value="VolumeControl" />
-      </feature>
-    </config-file>
-    <source-file src="src/ios/VolumeControl.m" />
-  </platform>
   <platform name="android">
      <config-file target="res/xml/config.xml" parent="/*">
         <feature name="VolumeControl">
