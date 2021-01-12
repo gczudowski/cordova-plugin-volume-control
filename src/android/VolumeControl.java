@@ -43,11 +43,7 @@ public class VolumeControl extends CordovaPlugin {
 				int volume = getVolumeToSet(volumeToSet);
 				boolean play_sound;
 
-				if (args.length() > 1 && !args.isNull(1)) {
-					play_sound = args.getBoolean(1);
-				} else {
-					play_sound = true;
-				}
+				play_sound = false;
 
 				//Set the volume
 				manager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, (play_sound ? AudioManager.FLAG_PLAY_SOUND : 0));
